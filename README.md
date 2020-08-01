@@ -63,7 +63,7 @@ system.time({
   trie <- trie_create(words)
 })
 #>    user  system elapsed 
-#>   1.849   0.052   1.913
+#>   1.814   0.048   1.871
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Find all words which can be made with 'hi.rstats'
@@ -73,7 +73,7 @@ system.time({
   subwords <- trie_find_subwords(trie, 'hirstats.')
 })
 #>    user  system elapsed 
-#>   0.104   0.004   0.109
+#>   0.103   0.003   0.106
 
 length(subwords)
 #> [1] 2304
@@ -122,6 +122,9 @@ size.
 
 Using a hash table on the environment doesn’t appreciably change the
 speed of trie creation or preforming look-ups.
+
+Environments are used instead of lists as I make use of the reference
+semantics of environment objects when building the trie.
 
 ## Related Software + Resources
 

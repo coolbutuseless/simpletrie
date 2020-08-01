@@ -133,6 +133,8 @@ table size.
 Using a hash table on the environment doesn't 
 appreciably change the speed of trie creation or preforming look-ups.
 
+Environments are used instead of lists as I make use of the reference semantics
+of environment objects when building the trie.
 
 
 ## Related Software + Resources
