@@ -32,7 +32,7 @@ You can install from
 
 ``` r
 # install.package('remotes')
-remotes::install_github('coolbutuseless/simpletrie)
+remotes::install_github('coolbutuseless/simpletrie')
 ```
 
 ## Example: Finding sub-words from a given word
